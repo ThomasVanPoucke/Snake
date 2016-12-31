@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<HBox fx:id="hbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.92" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snake.WelcomeController">
+      <VBox alignment="CENTER" prefWidth="400.0" style="-fx-font-size:20;" >
+         <TextFlow>
+            <Text>Hi. Welcome to </Text>
+            <Text style="-fx-font-weight: bold;" > Snake: The Game </Text>
+            <Text>. </Text>
+         </TextFlow>
+         <TextFlow>
+            <Text>Eat as much food as you can and grow.</Text>
+         </TextFlow>
+         <TextFlow>
+            <Text>But be careful not to hit your tail or the border!</Text>
+         </TextFlow>
+         <VBox style="-fx-padding:10;" spacing="5">
+            <TextFlow>
+               <Text>If you want you can configure how your snake will look like.</Text>
+            </TextFlow>
+            <TextFlow>
+               <Text>Select a picture from your pc</Text>
+            </TextFlow>
+            <HBox alignment="CENTER" spacing="10">
+               <Button fx:id="chooseSnake" onAction="#selectSnake" text="Select..." />
+               <TextField fx:id="chooseSnakeText" prefWidth="274.0" text="Take default" style="-fx-font-style: italic;" />
+            </HBox>
+         </VBox>
+         <VBox style="-fx-padding:10" spacing="5">
+            <TextFlow>
+               <Text>If you want you can configure how your food will look like</Text>
+            </TextFlow>
+            <TextFlow>
+               <Text>Select a picture from your pc</Text>
+            </TextFlow>
+            <HBox alignment="CENTER" spacing="10">
+               <Button fx:id="chooseButton" onAction="#selectFood" text="Select..." />
+               <TextField fx:id="chooseFoodText" prefWidth="274.0" text="Take default" style="-fx-font-style: italic" />
+            </HBox>
+         </VBox>
+         <HBox alignment="CENTER" style="-fx-padding:30;">
+            <Button fx:id="play" onAction="#play" text="Click here to play" />
+         </HBox>
+      </VBox>
+</HBox>
